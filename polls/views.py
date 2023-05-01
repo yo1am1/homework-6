@@ -17,11 +17,6 @@ def add_teacher(request):
     return render(request, "teacher_add_form.html", {"form": form})
 
 
-def teacher_list(request):
-    teachers = Teacher.objects.values()
-    return render(request, "teachers.html", {"teachers": teachers})
-
-
 def add_group(request):
     if request.method == "POST":
         form = GroupForm(request.POST)
@@ -35,6 +30,11 @@ def add_group(request):
     return render(request, "group_add_form.html", {"form": form})
 
 
+def teacher_list(request):
+    teachers = Teacher.objects.values()
+    return render(request, "teachers.html", {"teachers": teachers})
+
+
 def group_list(request):
-    groups = Group.objects.all()
+    groups = Group.objects.values()
     return render(request, "groups.html", {"groups": groups})

@@ -71,14 +71,14 @@
 <body>
 <h1 style="text-align: center; ">Trepalin Yegor <p> ДЗ 6. Django Forms </p></h1>
 <form>
-<ul>
-    <h1 style="text-align: left;">List of teachers</h1>
-    {% for teacher in teachers %}
-        <li><h3>{{ teacher.name }} ({{ teacher.age }} years old), {{ teacher.subjects }}</h3></li>
-    {% empty %}
-        <li><h3>There are no teachers in db.</h3></li>
-    {% endfor %}
-</ul>
+    <ul>
+        <h1 style="text-align: center;">List of teachers</h1>
+        {% for teacher in teachers %}
+            <li><h3>Name: {{ teacher.name }} ({{ teacher.age }} years old), {{ teacher.subjects }}</h3></li>
+        {% empty %}
+            <li><h3>There are no teachers in db.</h3></li>
+        {% endfor %}
+    </ul>
 </form>
 <nav>
     <ul>

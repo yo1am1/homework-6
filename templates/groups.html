@@ -69,17 +69,16 @@
     </style>
 </head>
 <body>
+<form>
 <h1 style="text-align: center; ">Trepalin Yegor <p> ДЗ 6. Django Forms </p></h1>
-
-<ul>
-    <h1 style="text-align: center;">List of groups</h1>
-    {% for group in groups %}
-
-        <li><h3>{{ group.name }}</h3></li>
-    {% empty %}
-        <li><h3>There are no groups in db.</h3></li>
-    {% endfor %}
-</ul>
+    <ul>
+        <h1 style="text-align: center;">List of groups</h1>
+        {% for group in groups %}
+            <li><h3>Name: {{ group.name }}, there is/are {{ group.capacity }} places left in this group</h3></li>
+        {% empty %}
+            <li><h3>There are no groups in db.</h3></li>
+        {% endfor %}
+    </ul>
 </form>
 <nav>
     <ul>

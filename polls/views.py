@@ -19,7 +19,7 @@ def add_teacher(request):
 
     else:
         form = TeacherForm()
-    return render(request, "teacher_add_form.html", {"form": form})
+    return render(request, "teacher_add_form.html", context={"form": form})
 
 
 def add_group(request):
@@ -32,14 +32,14 @@ def add_group(request):
 
     else:
         form = GroupForm()
-    return render(request, "group_add_form.html", {"form": form})
+    return render(request, "group_add_form.html", context={"form": form})
 
 
 def teacher_list(request):
     teachers = Teacher.objects.values()
-    return render(request, "teachers.html", {"teachers": teachers})
+    return render(request, "teachers.html", context={"teachers": teachers})
 
 
 def group_list(request):
     groups = Group.objects.values()
-    return render(request, "groups.html", {"groups": groups})
+    return render(request, "groups.html", context={"groups": groups})

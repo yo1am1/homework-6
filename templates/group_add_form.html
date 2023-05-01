@@ -69,20 +69,20 @@
     </style>
 </head>
 <body>
-<h1 style="text-align: center; ">Trepalin Yegor <p> Django HW #4 </p></h1>
+<h1 style="text-align: center; ">Trepalin Yegor <p> ДЗ 6. Django Forms </p></h1>
 
 <form method="POST" action="{% url 'add_group' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit</button>
 </form>
-    <nav>
-        <ul>
-            <li><a href="{% url 'add_group' %}">Add group</a></li>
-            <li><a href="{% url 'add_teacher' %}"><p>Add teacher</p></a></li>
-            <li><a href="{% url 'group_display' %}">List of existing groups</a></li>
-            <li><a href="{% url 'teachers_display' %}"><p>List of teachersr</p></a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="{% url 'add_group' %}">Add group</a></li>
+        <li><a href="{% url 'add_teacher' %}"><p>Add teacher</p></a></li>
+        <li><a href="{% url 'group_display' %}">List of existing groups</a></li>
+        <li><a href="{% url 'teachers_display' %}"><p>List of teachers</p></a></li>
+    </ul>
+</nav>
 </body>
 </html>

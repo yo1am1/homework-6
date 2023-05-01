@@ -13,6 +13,7 @@ class Teacher(models.Model):
 
 class Group(models.Model):
     name = models.CharField(max_length=200)
+    capacity = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name

@@ -16,4 +16,4 @@ class Group(models.Model):
     capacity = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.name
+        return self.name, self.capacity

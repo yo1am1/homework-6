@@ -1,8 +1,12 @@
-from django.core.exceptions import ValidationError
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from .forms import TeacherForm, GroupForm
 from .models import Teacher, Group
+
+
+def index(request):
+    return render(request, "index.html")
 
 
 def add_teacher(request):

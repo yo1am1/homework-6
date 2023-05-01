@@ -1,0 +1,8 @@
+<ul>
+    <h1 style="text-align: left;">List of teachers</h1>
+{% for teacher in teachers %}
+    <li>{{ teacher.name }} ({{ teacher.age }} years old), {{ teacher.subjects }}</li>
+{% empty %}
+    <li>There are no teachers in db.</li>
+{% endfor %}
+</ul>

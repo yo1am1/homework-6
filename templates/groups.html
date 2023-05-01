@@ -1,0 +1,9 @@
+<ul>
+    <h1 style="text-align: left;">List of groups</h1>
+{% for group in groups %}
+
+    <li>{{ group.name }}</li>
+{% empty %}
+    <li>There are no groups in db.</li>
+{% endfor %}
+</ul>
